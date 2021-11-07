@@ -1,19 +1,3 @@
-# problems on highlighting 
-# non word - no problem (able to take in any weird capitalized in a word, and only highlights when it`s not in the corpus)
-# real word - stay away from the word : try me
-
-# dictionary search: just a slight problem when dehighlighting (sometimes work well sometimes dont)
-#                  : to recreate the bug just type words that is existing in another words like: "the", "therma","thermall" (the and ther and therma exist in each other, which may end highlight the similar words)
-#                  : demo purpose: stay away from similar word seach like: amnesia, covid ... words that has no root word before 
-
-# update changes made for this version:
-# 1) tokenize function - filter numeric and stop words (instead of putting in non word check function)
-# 4) added minimal edit distance on the drop box for word correction (probability will be the first sort)
-# 5) added indication status for program is running: in case GUI did pop up - status will indicate ready
-# 6) included "re" library for search on symbols "./ ( ) etc"
-# 7) real word check function - changed the else part on p_b,p_t instead of every rung or if, now changed to only 1 else (probability will be none instead of 100 in the earlier version)
-
-# - - - - - - - LIBRARIES (PACKAGE) - - - - - -  - - - -
 import pickle
 import re
 import nltk, string
